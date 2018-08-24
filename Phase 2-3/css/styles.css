@@ -1,0 +1,20 @@
+* {
+	font-family: helvetica;
+}
+
+#hero {
+	padding:100px;
+	min-height:200px;
+	background-image: url(../mmai21-7.png);
+	background-size: cover;
+	background-attachment: fixed;
+	opacity:0.85;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
