@@ -82,6 +82,8 @@ nav{
 		nav ul li{
 			float: left;
 			border:1px solid #000000;
+			clear: none;
+			width:100px;
 		}
 			nav ul li a{
 				display: block;
@@ -116,3 +118,25 @@ nav, main, footer {
 		font-weight:bold;
 		font-size:1.1em;
 	}
+
+@media screen and (max-width:600px){
+	
+		nav ul li a{
+			transition:0s !important;
+		}
+			nav ul li a:hover{
+				font-size:1em;
+			}
+	#about{
+		margin:2em 1em !important;
+	}
+}
+
+@media screen and (max-width: 450px){
+	nav ul li{
+		clear:both !important;
+	}
+	#title h1{
+		font-size:2em;
+	}
+}
