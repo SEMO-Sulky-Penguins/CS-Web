@@ -18,3 +18,25 @@ a {
 ul {
 	list-style: none;
 }
+
+/*for navigation bars:*/
+nav ul{
+	margin: 0;
+	padding: 0;
+}
+nav a{
+	display: block;
+	color: rgb(177, 34, 34);
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+nav li{
+	float: left;
+}
+nav a:hover{
+	background-color: #111;
+}
+nav, main, footer {
+	clear: both;
+}
