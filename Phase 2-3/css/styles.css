@@ -98,6 +98,7 @@ nav {
 					background-color: #000000;
 					font-size: 1.2em;
 				}
+
 /*for footer: */
 footer {
 	background-color: #111;
@@ -147,6 +148,26 @@ nav, main, footer {
 		visibility: hidden;
 }
 
+#signUp {
+	background-color: #111;
+	padding: 1em;
+	border-radius: 0.5em;
+	text-align: center;
+	margin: 0.5em 3em;
+}
+	#signUp input[type="submit"] {
+		width: 10em;
+		padding: 0.5em;
+		font-weight: bold;
+		background-color: #FFFFFF;
+		border: 3px solid #4d4d4d;
+		font-size: 0.8em;
+		transition: 0.5s;
+	}
+		#signUp input[type="submit"]:hover {
+			font-size: 0.9em;
+		}
+
 @media screen and (max-width: 600px) {
 	nav ul li a {
 		transition: 0s !important;
@@ -166,6 +187,11 @@ nav, main, footer {
 	
 	.hero {
 		min-height: 300px !important;
+	}
+	
+	#signUp {
+		text-align: left;
+		margin: 1em 0;
 	}
 }
 
