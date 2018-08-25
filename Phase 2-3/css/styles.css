@@ -5,55 +5,58 @@
 body {
 	background-color: #262626;
 	color: #FFFFFF;
-	font-size:1.1em;
+	font-size: 1.1em;
 }
 
 div {
-	margin:1.5em 0;
+	margin: 1.5em 0;
 }
 
 #about {
 	margin: 1em 3em;
 	background-color: #111;
 	border-radius: 0.5em;
-	padding:1.5em;
+	padding: 1.5em;
 }
 	#about p {
-		font-size:1.2em;
-		font-family:lucida;
+		font-size: 1.2em;
+		font-family: lucida;
 	}
 
 .hero {
-	position:relative;
-	background-size:cover;
+	position: relative;
+	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-position: 40% 60%;
-	min-height:400px;
-	max-width:100%;
-	opacity:0.7;
+	min-height: 500px;
+	max-width: 100%;
+	opacity: 0.7;
 	image-orientation: 0deg;
 }
 
 #indexHero {
 	background-image: url(../../images/mmai21-7.png);
+	background-position: 40% 60%;
 }
 #eventsHero {
 	background-image: url(../../images/mmai20-4.JPG);
+	background-position: 60% 70%;
 }
 #contactHero {
 	background-image: url(../../images/mmai21-5.jpg);
+	background-position: center;
 }
 #registerHero {
 	background-image: url(../../images/mmai21-3.JPG);
+	background-position: center 45%;
 }
 
 #title {
 	text-align: center;
 }
 
-#title h1{
-	font-size:2.5em;
+#title h1 {
+	font-size: 2.5em;
 }
 
 a {
@@ -68,35 +71,35 @@ ul {
 	list-style: none;
 }
 
-/*for navigation bars:*/
-nav{
+/*for navigation bars: */
+nav {
 
 }
-	nav ul{
+	nav ul {
 		margin: 0;
 		padding: 0;
 	}
-		nav ul li{
+		nav ul li {
 			float: left;
-			border:1px solid #000000;
+			border: 1px solid #000000;
 			clear: none;
-			min-width:100px;
+			min-width: 100px;
 		}
-			nav ul li a{
+			nav ul li a {
 				display: block;
 				/*color: rgb(177, 34, 34);*/
 				text-align: center;
 				padding: 14px 16px;
 
 				background-color: #111;
-				transition:0.5s;
+				transition: 0.5s;
 			}
-				nav ul li a:hover{
+				nav ul li a:hover {
 					background-color: #000000;
-					font-size:1.2em;
+					font-size: 1.2em;
 				}
-/*for footer:*/
-footer{
+/*for footer: */
+footer {
 	background-color: #111;
 	width: 100%;
 	height: auto;
@@ -105,59 +108,73 @@ footer{
 	margin-left: -8px;
 	padding: 1em;
 }
-	footer p{
+	footer p {
 		font-size: 15px;
 		margin-top: 25px;
 		padding: 0;
 		text-transform: uppercase;
 	}
 
-	footer a{
+	footer a {
 		text-align: center;
 		padding: 14px 16px;
 	}
-		footer a:hover{
+		footer a:hover {
 			color: #c8102e;/*color is the red from the semo.edu website*/
 		}
 
 main {
-	padding:1em 0;
+	padding: 1em 0;
 }
 
 nav, main, footer {
 	clear: both;
 }
 
-.contactInfo{
+.contactInfo {
 	margin: 0;
 }
-	.contactInfo span:nth-child(1){
-		font-weight:bolder;
-		font-size:1.2em;
+	.contactInfo span:nth-child(1) {
+		font-weight: bolder;
+		font-size: 1.2em;
 	}
-	.contactInfo span:nth-child(3){
-		font-weight:bold;
-		font-size:1.1em;
+	.contactInfo span:nth-child(3) {
+		font-weight: bold;
+		font-size: 1.1em;
 	}
 
-@media screen and (max-width:600px){
+#topLink {
+		visibility: hidden;
+}
 
-		nav ul li a{
-			transition:0s !important;
+@media screen and (max-width: 600px) {
+	nav ul li a {
+		transition: 0s !important;
+	}
+		nav ul li a:hover {
+			font-size: 1em;
 		}
-			nav ul li a:hover{
-				font-size:1em;
-			}
-	#about{
-		margin:2em 1em !important;
+
+	#about {
+		margin: 2em 1em !important;
+	}
+	
+	#topLink {
+		visibility: visible;
+		color: white;
+	}
+	
+	.hero {
+		min-height: 300px !important;
 	}
 }
 
-@media screen and (max-width: 450px){
-	nav ul li{
-		clear:both !important;
+@media screen and (max-width: 450px) {
+	nav ul li {
+		clear: both !important;
 	}
-	#title h1{
-		font-size:2em;
+	
+	#title h1 {
+		font-size: 2em;
 	}
 }
