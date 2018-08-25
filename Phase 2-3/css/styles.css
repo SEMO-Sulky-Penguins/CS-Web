@@ -32,23 +32,20 @@ div {
 	min-height:400px;
 	max-width:100%;
 	opacity:0.7;
+	image-orientation: 0deg;
 }
 
 #indexHero {
 	background-image: url(../../images/mmai21-7.png);
-	image-orientation: 0deg;
 }
 #eventsHero {
 	background-image: url(../../images/mmai20-4.JPG);
-	image-orientation: 0deg;
 }
 #contactHero {
 	background-image: url(../../images/mmai21-5.jpg);
-	image-orientation: 0deg;
 }
 #registerHero {
 	background-image: url(../../images/mmai21-3.JPG);
-	image-orientation: 0deg;
 }
 
 #title {
@@ -83,7 +80,7 @@ nav{
 			float: left;
 			border:1px solid #000000;
 			clear: none;
-			width:100px;
+			min-width:100px;
 		}
 			nav ul li a{
 				display: block;
@@ -108,22 +105,20 @@ footer{
 	margin-left: -8px;
 	padding: 1em;
 }
+	footer p{
+		font-size: 15px;
+		margin-top: 25px;
+		padding: 0;
+		text-transform: uppercase;
+	}
 
-footer p{
-	font-size: 15px;
-	margin-top: 25px;
-	padding: 0;
-	text-transform: uppercase;
-}
-
-footer a{
-	text-align: center;
-	padding: 14px 16px;
-}
-
-footer a:hover{
-	color: #c8102e;/*color is the red from the semo.edu website*/
-}
+	footer a{
+		text-align: center;
+		padding: 14px 16px;
+	}
+		footer a:hover{
+			color: #c8102e;/*color is the red from the semo.edu website*/
+		}
 
 main {
 	padding:1em 0;
