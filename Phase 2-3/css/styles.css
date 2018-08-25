@@ -73,7 +73,7 @@ ul {
 
 /*for navigation bars:*/
 nav{
-	
+
 }
 	nav ul{
 		margin: 0;
@@ -90,7 +90,7 @@ nav{
 				/*color: rgb(177, 34, 34);*/
 				text-align: center;
 				padding: 14px 16px;
-				
+
 				background-color: #111;
 				transition:0.5s;
 			}
@@ -98,6 +98,31 @@ nav{
 					background-color: #000000;
 					font-size:1.2em;
 				}
+/*for footer:*/
+footer{
+	width: 100%;
+	height: 60px;
+	position: absolute;
+	vertical-align: bottom;
+	margin-left: -8px;
+}
+
+footer p{
+	font-size: 12px;
+	margin-top: 25px;
+	padding: 0;
+	text-transform: uppercase;
+}
+
+footer a{
+	text-align: center;
+	padding: 14px 16px;
+}
+
+footer a:hover{
+	color: #c8102e;/*color is the red from the semo.edu website*/
+	font-size:1.2em;
+}
 
 main {
 	padding:1em 0;
@@ -120,7 +145,7 @@ nav, main, footer {
 	}
 
 @media screen and (max-width:600px){
-	
+
 		nav ul li a{
 			transition:0s !important;
 		}
