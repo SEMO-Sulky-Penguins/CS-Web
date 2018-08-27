@@ -1,13 +1,22 @@
-/* SIGAI Scripts */
+// SIGAI Scripts
+
 /*
-For regular maintenance of events, you'll need to do the following:
-1) add a list of events for the semester following the same scheme as below.
-2) modify getSemester(id) to return the list you created for the corresponding id
-3) add a ul in events.html with the next id in line (so if we're on event29 add event30)
-4) modify the current and currentAI variables to be set to the current semester lists.
+ * For regular maintenance of events, you'll need to do the following:
+ * 1) add a list of events for the semester following the same scheme as below.
+ * 2) modify getSemester(id) to return the list you created for the corresponding id
+ * 3) add a ul in events.html with the next id in line (so if we're on event29 add event30)
+ *
+ * Also be sure to change out the president email address whenever a new president is elected!
  */
 
-/* EVENT LISTS  */
+// Global Variables
+
+
+
+// EVENT LISTS
+
+//var presidentEmail = "amgunther1s@semo.edu";
+var presidentEmail = "scsladek1s@semo.edu";
 
 const fall18 = [
 	"8/27: General Meeting"
@@ -25,8 +34,6 @@ const fall17 = [
 	"11/11 - 12: MegaMinerAI 20 at Missouri S&T",
     "11/12: Michael Ranciglio, Aaron Gunther, and Tatianna Reinbolt place 3rd in globals at MegaMiner"
 ];
-
-// const current = fall18; //MODIFY THIS TO MATCH CURRENT SEMESTER FOR SIGAI
 
 /*
  * Called upon within loadEvent()
@@ -47,35 +54,32 @@ function getSemester(id){
     }
 }
 
-/* Loads the events into the ul tags on events.html */
+// Loads the events into the ul tags on events.html
+
 function loadEvent(id){
 	var event = document.getElementById(id);
 	var info = getSemester(id);
+	var li;
 	for(let i = 0; i < info.length; i++){
-		var li = document.createElement("li");
+		li = document.createElement("li");
 		li.appendChild(document.createTextNode(info[i]));
 		event.appendChild(li);
 	}
 }
 
-/*
- * Loads current events for SIGAI.
- * Is called on in events.html.
-*/
-/*
-function loadCurrent(){
-	var eventList = document.getElementById("currentEvents");
-	var d = new Date();
-	var month = d.getMonth()+1;
-	var day = d.getDate();
-	var li;
-	for(let i = 0; i < current.length; i++){
-		var event = (current[i]).split("/", 1);
-		if(event[0] >= month) {
-			li = document.createElement("li");
-			li.appendChild(document.createTextNode(current[i]));
-			eventList.appendChild(li);
-		}
+// REGISTRATION FORM
+
+function sendMail(){
+	try{
+		var subject = encodeURI(document.getElementById("subject").value);
+		var name = encodeURI(document.getElementById("name").value);
+		var email = encodeURI(document.getElementById("email").value);
+		var msg = encodeURI(document.getElementById("msg").value);
+		var body = "Name: " + name + "%0D%0A" + "Email: " + email + "%0D%0A" + msg;
+		var mail = "mailto:scsladek1s@semo.edu?subject=" + subject + "&body=" + body;
+		window.location.href = mail;
+	} catch(e) {
+		window.alert("Message failed to send.");
+		console.log(e);
 	}
 }
-*/
