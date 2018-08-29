@@ -11,28 +11,26 @@
 
 // Global Variables
 
-
-
-// EVENT LISTS
-
 //var presidentEmail = "amgunther1s@semo.edu";
 var presidentEmail = "scsladek1s@semo.edu";
+
+// EVENT LISTS
 
 const fall18 = [
 	"8/27: General Meeting"
 ];
 
 const spring18 = [
-    "2/13: Bresenham's Line Algorithm for Line of Sight - Aaron Gunther",
-    "2/20: Linux Navigation - Michael Ranciglio",
-    "4/14 - 15: MegaMinerAI 21 at Missouri S&T",
-    "4/15: Andrew Smith places 5th in student bracket at MegaMiner"
+	"2/13: Bresenham's Line Algorithm for Line of Sight - Aaron Gunther",
+	"2/20: Linux Navigation - Michael Ranciglio",
+	"4/14 - 15: MegaMinerAI 21 at Missouri S&T",
+	"4/15: Andrew Smith places 5th in student bracket at MegaMiner"
 ];
 
 const fall17 = [
 	"9/12: SIGAI is created",
 	"11/11 - 12: MegaMinerAI 20 at Missouri S&T",
-    "11/12: Michael Ranciglio, Aaron Gunther, and Tatianna Reinbolt place 3rd in globals at MegaMiner"
+	"11/12: Michael Ranciglio, Aaron Gunther, and Tatianna Reinbolt place 3rd in globals at MegaMiner"
 ];
 
 /*
@@ -59,11 +57,13 @@ function getSemester(id){
 function loadEvent(id){
 	var event = document.getElementById(id);
 	var info = getSemester(id);
-	var li;
-	for(let i = 0; i < info.length; i++){
-		li = document.createElement("li");
-		li.appendChild(document.createTextNode(info[i]));
-		event.appendChild(li);
+	if(info != "-"){
+		var li;
+		for(let i = 0; i < info.length; i++){
+			li = document.createElement("li");
+			li.appendChild(document.createTextNode(info[i]));
+			event.appendChild(li);
+		}
 	}
 }
 
@@ -71,10 +71,10 @@ function loadEvent(id){
 
 function sendMail(){
 	try{
-		var subject = encodeURI(document.getElementById("subject").value);
-		var name = encodeURI(document.getElementById("name").value);
-		var email = encodeURI(document.getElementById("email").value);
-		var msg = encodeURI(document.getElementById("msg").value);
+		var subject = encodeURI(document.forms["signUp"]["subject"].value);
+		var name = encodeURI(document.forms["signUp"]["name"].value);
+		var email = encodeURI(document.forms["signUp"]["email"].value);
+		var msg = encodeURI(document.forms["signUp"]["msg"].value);
 		var body = "Name: " + name + "%0D%0A" + "Email: " + email + "%0D%0A" + msg;
 		var mail = "mailto:scsladek1s@semo.edu?subject=" + subject + "&body=" + body;
 		window.location.href = mail;
