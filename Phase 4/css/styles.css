@@ -100,10 +100,13 @@ nav {
 				}
 
 /*for footer: */
+/*
 footer {
 	background-color: #111;
 	width: 100%;
 	height: auto;
+	left:0px;
+	bottom:0px;
 	position: absolute;
 	vertical-align: bottom;
 	margin-left: -8px;
@@ -121,11 +124,31 @@ footer {
 		padding: 14px 16px;
 	}
 		footer a:hover {
-			color: #c8102e;/*color is the red from the semo.edu website*/
+			color: #c8102e;
+		}
+*/
+footer {
+	background-color: #111;
+	width: 100%;
+	left:0px;
+	bottom:0px;
+	position: fixed;
+	padding: 1em;
+	max-height:4em;
+}
+	footer p {
+		text-transform: uppercase;
+		padding: 0;
+	}
+	footer a {
+		text-align: center;
+	}
+		footer a:hover {
+			color: #c8102e;
 		}
 
 main {
-	padding: 1em 0;
+	padding: 1em 0 4em 0;
 }
 
 nav, main, footer {
@@ -177,6 +200,12 @@ nav, main, footer {
 	background-repeat: no-repeat;
 }
 
+#eventList ul li:first-child {
+	font-size: 1.3em;
+	text-decoration: underline;
+	padding-bottom: 0.5em;
+}
+
 @media screen and (max-width: 600px) {
 	nav ul li a {
 		transition: 0s !important;
@@ -214,6 +243,7 @@ nav, main, footer {
 @media screen and (max-width: 500px) {
 	nav ul li {
 		clear: both !important;
+		width:100%;
 	}
 	
 	#title h1 {
@@ -222,9 +252,14 @@ nav, main, footer {
 	
 	#logo {
 		float: left;
+		text-align:center;
 		height: 100px;
 		width: 100px;
 		background-size: 100px 100px;
 		padding: 0.25em;
+	}
+	
+	body {
+		font-size: 1.2em;
 	}
 }
