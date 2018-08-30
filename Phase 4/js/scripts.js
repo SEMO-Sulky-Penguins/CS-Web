@@ -17,10 +17,12 @@ var presidentEmail = "scsladek1s@semo.edu";
 // EVENT LISTS
 
 const fall18 = [
+	"Fall 2018:",
 	"8/27: General Meeting"
 ];
 
 const spring18 = [
+	"Spring 2018:",
 	"2/13: Bresenham's Line Algorithm for Line of Sight - Aaron Gunther",
 	"2/20: Linux Navigation - Michael Ranciglio",
 	"4/14 - 15: MegaMinerAI 21 at Missouri S&T",
@@ -28,42 +30,34 @@ const spring18 = [
 ];
 
 const fall17 = [
+	"Fall 2017:",
 	"9/12: SIGAI is created",
 	"11/11 - 12: MegaMinerAI 20 at Missouri S&T",
 	"11/12: Michael Ranciglio, Aaron Gunther, and Tatianna Reinbolt place 3rd in globals at MegaMiner"
 ];
 
-/*
- * Called upon within loadEvent()
- * The ul tag will have an id of event0, event1, etc.
- * This will return the list of events to populate that ul with
-*/
-function getSemester(id){
-    switch(id){
-        case "event0":
-            return fall17;
-        case "event1":
-            return spring18;
-        case "event2":
-            return fall18;
-        default:
-            return "-";
-            break;
-    }
-}
+var eventList = [
+	fall18,
+	spring18,
+	fall17
+];
 
-// Loads the events into the ul tags on events.html
+// Loads the events into the div eventList on events.html
 
-function loadEvent(id){
-	var event = document.getElementById(id);
-	var info = getSemester(id);
-	if(info != "-"){
-		var li;
-		for(let i = 0; i < info.length; i++){
+function loadEvents(){
+	var eventDiv = document.getElementById('eventList');
+	var ul;
+	var li;
+	var info;
+	for(let i = 0; i < eventList.length; i++){
+		info = eventList[i]; //current semester of events
+		ul = document.createElement("ul");
+		for(let j = 0; j < info.length; j++){
 			li = document.createElement("li");
-			li.appendChild(document.createTextNode(info[i]));
-			event.appendChild(li);
+			li.appendChild(document.createTextNode(info[j]));
+			ul.appendChild(li);
 		}
+		eventDiv.appendChild(ul);
 	}
 }
 
