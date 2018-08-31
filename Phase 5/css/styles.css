@@ -1,3 +1,230 @@
 * {
 	font-family: helvetica;
 }
+
+body {
+	background-color: #262626;
+	color: #FFFFFF;
+	font-size: 1.1em;
+}
+
+div {
+	margin: 1.5em 0;
+}
+
+#about {
+	margin: 1em 3em;
+	background-color: #111;
+	border-radius: 0.5em;
+	padding: 1.5em;
+}
+	#about p {
+		font-size: 1.2em;
+		font-family: lucida;
+	}
+
+.hero {
+	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	min-height: 500px;
+	max-width: 100%;
+	opacity: 0.7;
+	image-orientation: 0deg;
+}
+
+#indexHero {
+	background-image: url(../../images/mmai21-7.png);
+	background-position: 40% 60%;
+}
+#eventsHero {
+	background-image: url(../../images/mmai20-4.JPG);
+	background-position: 60% 70%;
+}
+#contactHero {
+	background-image: url(../../images/mmai21-5.jpg);
+	background-position: center;
+}
+#registerHero {
+	background-image: url(../../images/mmai21-3.JPG);
+	background-position: center 45%;
+}
+
+#title {
+	text-align: center;
+}
+
+#title h1 {
+	font-size: 2.5em;
+}
+
+a {
+	text-decoration: none;
+}
+
+a, a:visited, a:hover {
+	color: #FFFFFF;
+}
+
+ul {
+	list-style: none;
+}
+
+/*for navigation bars: */
+nav {
+
+}
+	nav ul {
+		margin: 0;
+		padding: 0;
+	}
+		nav ul li {
+			float: left;
+			border: 1px solid #000000;
+			clear: none;
+			min-width: 100px;
+		}
+			nav ul li a {
+				display: block;
+				/*color: rgb(177, 34, 34);*/
+				text-align: center;
+				padding: 14px 16px;
+
+				background-color: #111;
+				transition: 0.5s;
+			}
+				nav ul li a:hover {
+					background-color: #000000;
+					font-size: 1.2em;
+				}
+
+/*for footer: */
+footer {
+	background-color: #111;
+	width: 100%;
+	height: auto;
+	position: absolute;
+	vertical-align: bottom;
+	margin-left: -8px;
+	padding: 1em;
+}
+	footer p {
+		font-size: 15px;
+		margin-top: 25px;
+		padding: 0;
+		text-transform: uppercase;
+	}
+
+	footer a {
+		text-align: center;
+		padding: 14px 16px;
+	}
+		footer a:hover {
+			color: #c8102e;/*color is the red from the semo.edu website*/
+		}
+
+main {
+	padding: 1em 0;
+}
+
+nav, main, footer {
+	clear: both;
+}
+
+.contactInfo {
+	margin: 0;
+}
+	.contactInfo span:nth-child(1) {
+		font-weight: bolder;
+		font-size: 1.2em;
+	}
+	.contactInfo span:nth-child(3) {
+		font-weight: bold;
+		font-size: 1.1em;
+	}
+
+#topLink {
+		visibility: hidden;
+}
+
+#signUp {
+	background-color: #111;
+	padding: 1em;
+	border-radius: 0.5em;
+	text-align: center;
+	margin: 0.5em 3em;
+}
+	#signUp input[type="submit"] {
+		width: 10em;
+		padding: 0.5em;
+		font-weight: bold;
+		background-color: #FFFFFF;
+		border: 3px solid #4d4d4d;
+		font-size: 0.8em;
+		transition: 0.5s;
+	}
+		#signUp input[type="submit"]:hover {
+			font-size: 0.9em;
+		}
+
+#logo {
+	float: right;
+	height: 128px;
+	width: 128px;
+	background-image: url("../../images/Acmsigai.png");
+	background-size: 128px 128px;
+	background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 600px) {
+	nav ul li a {
+		transition: 0s !important;
+	}
+		nav ul li a:hover {
+			font-size: 1em;
+		}
+
+	#about {
+		margin: 2em 1em !important;
+	}
+	
+	#topLink {
+		visibility: visible;
+		color: white;
+	}
+	
+	.hero {
+		min-height: 300px !important;
+	}
+	
+	#signUp {
+		text-align: left;
+		margin: 1em 0;
+	}
+	
+	#logo {
+		float: right;
+		height: 64px;
+		width: 64px;
+		background-size: 64px 64px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	nav ul li {
+		clear: both !important;
+	}
+	
+	#title h1 {
+		font-size: 2em;
+	}
+	
+	#logo {
+		float: left;
+		height: 100px;
+		width: 100px;
+		background-size: 100px 100px;
+		padding: 0.25em;
+	}
+}
