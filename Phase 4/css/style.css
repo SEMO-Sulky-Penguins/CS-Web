@@ -1,0 +1,12 @@
+*{
+    font-family: helvetica !important;
+}
+body{
+    background-color:#262626 !important;
+    color:white !important;
+}
+#logo{
+    height: 64px;
+    width:64px;
+    padding:5px;
+}
