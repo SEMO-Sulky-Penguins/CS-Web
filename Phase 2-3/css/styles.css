@@ -188,21 +188,21 @@ nav, main, footer {
 	#about {
 		margin: 2em 1em !important;
 	}
-	
+
 	#topLink {
 		visibility: visible;
 		color: white;
 	}
-	
+
 	.hero {
 		min-height: 300px !important;
 	}
-	
+
 	#signUp {
 		text-align: left;
 		margin: 1em 0;
 	}
-	
+
 	#logo {
 		float: right;
 		height: 64px;
@@ -215,11 +215,11 @@ nav, main, footer {
 	nav ul li {
 		clear: both !important;
 	}
-	
+
 	#title h1 {
 		font-size: 2em;
 	}
-	
+
 	#logo {
 		float: left;
 		height: 100px;
