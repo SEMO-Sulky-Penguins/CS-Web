@@ -44,7 +44,7 @@ code{
 }
 #eventsHero {
 	background-image: url(../../images/mmai20-4.JPG);
-	background-position: 60% 70%;
+	background-position: center bottom;
 }
 #contactHero {
 	background-image: url(../../images/mmai21-5.jpg);
@@ -52,7 +52,11 @@ code{
 }
 #registerHero {
 	background-image: url(../../images/mmai21-3.JPG);
-	background-position: center 45%;
+	background-position: center 60%;
+}
+#resourcesHero {
+	background-image: url(../../images/mmai21-2.JPG);
+	background-position: right center;
 }
 
 .contactInfo {
@@ -81,8 +85,11 @@ code{
 		visibility: visible;
 		color: white;
 	}
-
 	.hero {
 		min-height: 300px !important;
+		max-width: 600px !important;
+	}
+	#indexHero, #registerHero, #resourcesHero {
+		background-position: center;
 	}
 }

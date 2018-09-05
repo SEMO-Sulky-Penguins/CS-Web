@@ -1,3 +1,7 @@
+/* This script was used during the development process to keep code clean
+	but was removed afterwards to increase performance.
+*/
+
 const headTags = [
 	'<meta name="theme-color" content="#000000">',
 	'<link rel="icon" type="image/png" href="../images/favicon-32x32.png">',
